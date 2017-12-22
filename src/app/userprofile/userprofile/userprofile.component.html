@@ -1,0 +1,29 @@
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" > </button>
+      <a [routerLinkActive] ="active" class="navbar-brand"  [routerLink]="['/userProfile/about']"><span class="glyphicons glyphicons-photo-album"></span> Picasa</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a  [routerLink]="['/userProfile/albumList/newAlbum']">Collections</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> account settings</a>
+           <ul class="dropdown-menu"  align= "center" >
+              <li > <div align= "center" class="media-center"><img src="{{ userProfileData.profilePicture}}" class="media-object" style="width:100px" ></div><li>
+              <hr>
+              <li>user :<strong>{{userData.username}}</strong></li>
+              <li>emailID:<strong>{{userData.email}}</strong> </li>
+              <li>Phone No:<strong>{{userProfileData.phoneNumber}}</strong></li>
+              <hr>
+            <li align= "center"><a [routerLink]="['/userProfile/accountDetails']"> <button type="button" class="btn btn-info" > Edit</button></a></li>
+           </ul></li>
+        <li><a [routerLink]="['/loginPage']"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,14 @@
+	<div class="well center-vertical col-md-2 ">
+			<form  #newAlbumForm = "ngForm" (ngSubmit) = "addnewAlbum(newAlbumForm.value)" method="post" >
+				<p class="alertMessage">{{alertMessage}}</p>
+
+				<div class="form-group">
+						<input type="name" placeholder="albumName" [(ngModel)] = "albumName" name = "albumName" class="form-control" required/>
+				</div>
+				<hr>
+				<div class="controls" align ="center">
+					<button type="submit" class="btn btn-primary button" >Submit</button>
+					<button  class="btn btn-primary button" >cancel</button>
+				</div>
+			</form>
+	</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <h3>Albums</h3>
+      <ul class="nav nav-tabs" >
+          <li ><a   [routerLink]="['/userProfile/albumList/newAlbum']">New Album</a></li>
+          <li *ngFor="let album of albumList" >
+            <a (click)="getAlbumContentByAlbumID(album.albumID)">{{album.albumName}}</a> 
+        </li>
+      </ul>    
+    <router-outlet></router-outlet>
+</div>
+
